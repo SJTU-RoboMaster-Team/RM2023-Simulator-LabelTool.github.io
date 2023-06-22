@@ -1,1 +1,40 @@
-# RM2023-Simulator-LabelTool(https://SJTU-RoboMaster-Team.github.io/RM2023-Simulator-LabelTool.github.io)
+# [RM2023-Simulator-LabelTool](https://SJTU-RoboMaster-Team.github.io/RM2023-Simulator-LabelTool.github.io)
+## 点击上方链接进行数据集生产
+## 一些有趣的小工具./Tool/pycontroller,批量生产数据集的过程中随机替换你提供的背景图片来达到数据增强的效果，详见[wiki](https://github.com/Spphire/RM-labeling-tool/wiki/PyController)
+## 操作指南
+
+TAB键打开关闭功能面板
+
+P键获取截图，<u>**强烈建议**</u> 在浏览器设置中关闭（下载前询问），并设置好合理的下载路径
+
+你会获得四个文件，一张原图，一张画框的图，两个标注文件（其中一个是txt，一个是json，两种格式，json可读性高一些，根据需要选一种用）
+
+<u> **按住左键** </u>才能用WASD和鼠标控制移动
+
+左键画面即可隐藏鼠标光标，esc或空格退出。
+
+R开关能量机关旋转，T随机让能量机关亮灯（随机状态）
+
+F可以在当前位置生成一个小装甲板，G可以在当前位置生成一个大装甲板
+
+屏幕中心瞄准装甲板时会使其处于高亮状态（不会影响保存的截图）
+
+高亮状态下，按住右键可以让装甲板跟随自己移动
+
+高亮状态下， 数字键可切换装甲板贴纸
+
+高亮状态下， C键切换灯条颜色
+
+## 标签编号解释
+
+对于能量机关来说，最终label=color*3+tag
+
+color 0: 蓝， 1 红
+
+tag 0：R，1：未激活，2：已激活
+
+对于装甲板来说，最终label=color*13+tag
+
+color 0: 蓝， 1：红， 2：灰， 3：紫
+
+tag 0：哨兵，1：英雄，2：工程，3：步兵3，4：平衡3，5：步兵4，6：平衡4，7：步兵5，8：平衡5，9：前哨站，10、11：大小基地装甲板，12：装甲板间隙
